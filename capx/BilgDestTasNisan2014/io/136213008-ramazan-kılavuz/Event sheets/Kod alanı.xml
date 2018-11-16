@@ -1,0 +1,163 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>Kod alanı</name>
+    <events>
+        <variable constant="0" name="BolumNo" sid="8168228820269197" static="0" type="number">1</variable>
+        <event-block sid="2304521001025667">
+            <conditions>
+                <condition id="0" name="On clicked" sid="589627615126415" type="BolumSec" />
+            </conditions>
+            <actions />
+        </event-block>
+        <event-block sid="537311140757837">
+            <conditions>
+                <condition id="0" name="On clicked" sid="6809891127733267" type="GeriDon" />
+            </conditions>
+            <actions>
+                <action id="-2" name="Go to layout" sid="94863164105418" type="System">
+                    <param id="0" name="Layout">Anasayfa</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="8573007130708769">
+            <conditions>
+                <condition id="0" name="On clicked" sid="1976339138321249" type="Oyna" />
+            </conditions>
+            <actions>
+                <action id="-25" name="Go to layout (by name)" sid="4032140605411927" type="System">
+                    <param id="0" name="Layout">&quot;Bolum&quot;&amp;BolumNo</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="8753830382007824">
+            <conditions>
+                <condition id="0" name="On clicked" sid="5706484801460844" type="Bitir" />
+            </conditions>
+            <actions>
+                <action id="-9" name="Set value" sid="907786975060487" type="System">
+                    <param id="0" name="Variable">BolumNo</param>
+                    <param id="1" name="Value">int(right(LayoutName,1))+1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="5557229976729174">
+            <conditions>
+                <condition id="0" name="On clicked" sid="1831781297089561" type="Sonraki" />
+            </conditions>
+            <actions>
+                <action id="-25" name="Go to layout (by name)" sid="6856049883920016" type="System">
+                    <param id="0" name="Layout">&quot;Bolum&quot;&amp;BolumNo</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="1195225725108805">
+            <conditions>
+                <condition id="-8" name="Compare two values" sid="5034262054805575" type="System">
+                    <param id="0" name="First value">LayoutName</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Second value">&quot;BolumSec&quot;</param>
+                </condition>
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="7165542006591588">
+                    <conditions>
+                        <condition id="-11" name="For Each" sid="2165095657731422" type="System">
+                            <param id="0" name="Object">Sayilar</param>
+                        </condition>
+                        <condition id="-7" name="Compare instance variable" sid="4271448807201775" type="Sayilar">
+                            <param id="0" name="Instance variable">No</param>
+                            <param id="1" name="Comparison">3</param>
+                            <param id="2" name="Value">BolumNo</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="5" name="Set frame" sid="1817166624105912" type="Sayilar">
+                            <param id="0" name="Frame number">Self.No</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="6871827271551922">
+            <conditions>
+                <condition id="6" name="On object clicked" sid="9666989158737861" type="Mouse">
+                    <param id="0" name="Mouse button">0</param>
+                    <param id="1" name="Click type">0</param>
+                    <param id="2" name="Object clicked">Sayilar</param>
+                </condition>
+                <condition id="-7" name="Compare instance variable" sid="2533328749048182" type="Sayilar">
+                    <param id="0" name="Instance variable">No</param>
+                    <param id="1" name="Comparison">3</param>
+                    <param id="2" name="Value">BolumNo</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-25" name="Go to layout (by name)" sid="3014920099731287" type="System">
+                    <param id="0" name="Layout">&quot;Bolum&quot;&amp;Sayilar.No</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="5452258304219669">
+            <conditions>
+                <condition id="0" name="On key pressed" sid="2313589474662886" type="Keyboard">
+                    <param id="0" name="Key">39 (Right arrow)</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-18" name="Rotate clockwise" sid="1789936548868959" type="ok">
+                    <param id="0" name="Degrees">20</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="9307156572765345">
+            <conditions>
+                <condition id="0" name="On key pressed" sid="7660093373961186" type="Keyboard">
+                    <param id="0" name="Key">37 (Left arrow)</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-19" name="Rotate counter-clockwise" sid="5880976107108342" type="ok">
+                    <param id="0" name="Degrees">20</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="2535180583297231">
+            <conditions>
+                <condition id="0" name="On key pressed" sid="458247035151291" type="Keyboard">
+                    <param id="0" name="Key">32 (Space)</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action behavior="Physics" id="5" name="Apply impulse at angle" sid="8648971164515351" type="kus">
+                    <param id="0" name="Impulse">10</param>
+                    <param id="1" name="Angle">ok.Angle</param>
+                    <param id="2" name="Image point">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="5152935114342693">
+            <conditions>
+                <condition id="6" name="On object clicked" sid="2036695727341013" type="Mouse">
+                    <param id="0" name="Mouse button">0</param>
+                    <param id="1" name="Click type">0</param>
+                    <param id="2" name="Object clicked">Text</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-26" name="Restart layout" sid="2157635620353053" type="System" />
+            </actions>
+        </event-block>
+        <event-block sid="6838701047359828">
+            <conditions>
+                <condition id="0" name="On clicked" sid="1555090122451955" type="Sonraki" />
+            </conditions>
+            <actions>
+                <action id="-25" name="Go to layout (by name)" sid="6469695765000311" type="System">
+                    <param id="0" name="Layout">&quot;Bolum&quot;&amp;BolumNo</param>
+                </action>
+            </actions>
+        </event-block>
+    </events>
+</c2eventsheet>

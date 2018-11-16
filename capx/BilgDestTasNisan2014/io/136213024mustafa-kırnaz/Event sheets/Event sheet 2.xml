@@ -1,0 +1,164 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>Event sheet 2</name>
+    <events>
+        <variable constant="0" name="HazirlikAsamasindaMi2" sid="5861183204490099" static="0" type="number">1</variable>
+        <event-block sid="9704143942070832">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="2551714939572468" type="System" />
+            </conditions>
+            <actions>
+                <action behavior="Physics" id="14" name="Set stepping iterations" sid="5864553120104608" type="Oyuncu">
+                    <param id="0" name="Velocity iterations">12</param>
+                    <param id="1" name="Position iterations">8</param>
+                </action>
+                <action behavior="Physics" id="14" name="Set stepping iterations" sid="3700116995682206" type="Zemin">
+                    <param id="0" name="Velocity iterations">12</param>
+                    <param id="1" name="Position iterations">8</param>
+                </action>
+                <action behavior="Physics" id="14" name="Set stepping iterations" sid="9661714959787609" type="Canavar">
+                    <param id="0" name="Velocity iterations">12</param>
+                    <param id="1" name="Position iterations">8</param>
+                </action>
+                <action behavior="Physics" id="14" name="Set stepping iterations" sid="3339856944638355" type="Tahta">
+                    <param id="0" name="Velocity iterations">12</param>
+                    <param id="1" name="Position iterations">8</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="2137173950451014">
+            <conditions>
+                <condition id="-14" name="Compare variable" sid="6889332654996592" type="System">
+                    <param id="0" name="Variable">HazirlikAsamasindaMi</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">1</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-4" name="Set position to another object" sid="2630399410381431" type="Oyuncu">
+                    <param id="0" name="Object">Sapan1</param>
+                    <param id="1" name="Image point (optional)">0</param>
+                </action>
+                <action id="-8" name="Scroll to object" sid="8468966164268024" type="System">
+                    <param id="0" name="Object">Sapan1</param>
+                </action>
+            </actions>
+            <sub-events>
+                <event-block sid="3995227179735757">
+                    <conditions>
+                        <condition id="2" name="Is in touch" sid="7735927076222542" type="Touch" />
+                    </conditions>
+                    <actions>
+                        <action id="-8" name="Set angle" sid="6548094101518834" type="Oyuncu">
+                            <param id="0" name="Angle">angle(Touch.X,Touch.Y,Sapan1.X,Sapan1.Y)</param>
+                        </action>
+                        <action id="-23" name="Move at angle" sid="5909388482973532" type="Oyuncu">
+                            <param id="0" name="Angle">Self.Angle+180</param>
+                            <param id="1" name="Distance">min(distance(Touch.X,Touch.Y,Sapan1.X,Sapan1.Y)/3,45)</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="1459333112941258">
+                    <conditions>
+                        <condition id="1" name="On any touch end" sid="1799233656414422" type="Touch" />
+                    </conditions>
+                    <actions>
+                        <action behavior="Physics" id="5" name="Apply impulse at angle" sid="7404658109107608" type="Oyuncu">
+                            <param id="0" name="Impulse">distance(Touch.X,Touch.Y,Sapan1.X,Sapan1.Y)/8</param>
+                            <param id="1" name="Angle">Self.Angle</param>
+                            <param id="2" name="Image point">0</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="521009938673613" type="System">
+                            <param id="0" name="Variable">HazirlikAsamasindaMi</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="7643731667092837">
+            <conditions>
+                <condition id="-22" name="Else" sid="4818167937554203" type="System" />
+            </conditions>
+            <actions>
+                <action id="-8" name="Scroll to object" sid="9179263151979594" type="System">
+                    <param id="0" name="Object">Oyuncu</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="1221373088337414">
+            <conditions>
+                <condition behavior="Physics" id="0" name="Is sleeping" sid="8098069299218292" type="Oyuncu" />
+            </conditions>
+            <actions>
+                <action id="-9" name="Set value" sid="538928458468765" type="System">
+                    <param id="0" name="Variable">HazirlikAsamasindaMi</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="3581808710242947">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="5430962158456808" type="Oyuncu">
+                    <param id="0" name="Object">Canavar</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Destroy" sid="8179322263540698" type="Canavar" />
+            </actions>
+        </event-block>
+        <event-block sid="8137885792313348">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="497961023332568" type="Canavar">
+                    <param id="0" name="Object">Tahta</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Destroy" sid="4155362914548848" type="Canavar" />
+            </actions>
+        </event-block>
+        <event-block sid="9587707348395834">
+            <conditions>
+                <condition id="-8" name="Compare two values" sid="5695588550498117" type="System">
+                    <param id="0" name="First value">Canavar.Count</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Second value">0</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-15" name="Set visible" sid="5293566661993839" type="Text">
+                    <param id="0" name="Visibility">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="5972600375462904">
+            <conditions>
+                <condition id="-19" name="On destroyed" sid="7319793381829485" type="Canavar" />
+            </conditions>
+            <actions>
+                <action id="2" name="Set visible" sid="8306381836014956" type="bolum2">
+                    <param id="0" name="Visibility">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="7336069635861212">
+            <conditions>
+                <condition id="0" name="On clicked" sid="1947058931226996" type="bolum2" />
+            </conditions>
+            <actions>
+                <action id="-2" name="Go to layout" sid="8079795670479662" type="System">
+                    <param id="0" name="Layout">Layout 2</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="2341102357666963">
+            <conditions>
+                <condition id="0" name="On clicked" sid="8126275757446596" type="yenile" />
+            </conditions>
+            <actions>
+                <action id="-26" name="Restart layout" sid="4448727513797835" type="System" />
+            </actions>
+        </event-block>
+    </events>
+</c2eventsheet>

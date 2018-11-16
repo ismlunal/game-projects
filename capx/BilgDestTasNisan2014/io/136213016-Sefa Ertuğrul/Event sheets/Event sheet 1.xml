@@ -1,0 +1,101 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>Event sheet 1</name>
+    <events>
+        <variable constant="0" name="Hazirlikasamasindami" sid="8471112742349827" static="0" type="number">1</variable>
+        <event-block sid="8439219298499017">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="3900278170001048" type="System" />
+            </conditions>
+            <actions>
+                <action behavior="Physics" id="14" name="Set stepping iterations" sid="7577047256998644" type="oyuncu">
+                    <param id="0" name="Velocity iterations">12</param>
+                    <param id="1" name="Position iterations">8</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="479790767070914">
+            <conditions>
+                <condition id="-25" name="On loader layout complete" sid="3948423694915253" type="System" />
+            </conditions>
+            <actions>
+                <action behavior="Physics" id="14" name="Set stepping iterations" sid="9144426497712332" type="zemın">
+                    <param id="0" name="Velocity iterations">12</param>
+                    <param id="1" name="Position iterations">8</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="5910397614656228">
+            <conditions>
+                <condition id="-14" name="Compare variable" sid="9196387538544423" type="System">
+                    <param id="0" name="Variable">Hazirlikasamasindami</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">1</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-4" name="Set position to another object" sid="9400567344813123" type="oyuncu">
+                    <param id="0" name="Object">sapan1</param>
+                    <param id="1" name="Image point (optional)">0</param>
+                </action>
+                <action id="-8" name="Scroll to object" sid="713350527272531" type="System">
+                    <param id="0" name="Object">sapan1</param>
+                </action>
+            </actions>
+            <sub-events>
+                <event-block sid="1164213815869659">
+                    <conditions>
+                        <condition id="2" name="Is in touch" sid="8469354958094235" type="Touch" />
+                    </conditions>
+                    <actions>
+                        <action id="-8" name="Set angle" sid="4682362843314066" type="oyuncu">
+                            <param id="0" name="Angle">angle(Touch.X,Touch.Y,sapan1.X,sapan1.Y)</param>
+                        </action>
+                        <action id="-23" name="Move at angle" sid="4780089874279372" type="oyuncu">
+                            <param id="0" name="Angle">Self.Angle+180</param>
+                            <param id="1" name="Distance">min(distance(Touch.X,Touch.Y,sapan1.X,sapan1.Y)/3,45)</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="5292099812740585">
+                    <conditions>
+                        <condition id="1" name="On any touch end" sid="6650409842697229" type="Touch" />
+                    </conditions>
+                    <actions>
+                        <action behavior="Physics" id="5" name="Apply impulse at angle" sid="8067450193126868" type="oyuncu">
+                            <param id="0" name="Impulse">distance(Touch.X,Touch.Y,sapan1.X,sapan1.Y)/10</param>
+                            <param id="1" name="Angle">Self.Angle</param>
+                            <param id="2" name="Image point">0</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="7463797301738989" type="System">
+                            <param id="0" name="Variable">Hazirlikasamasindami</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="70706998323866">
+            <conditions>
+                <condition id="-22" name="Else" sid="5413502655201388" type="System" />
+            </conditions>
+            <actions>
+                <action id="-8" name="Scroll to object" sid="1544050556199906" type="System">
+                    <param id="0" name="Object">oyuncu</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="7506816345771493">
+            <conditions>
+                <condition behavior="Physics" id="0" name="Is sleeping" sid="8477304984754577" type="oyuncu" />
+            </conditions>
+            <actions>
+                <action id="-9" name="Set value" sid="5003794864488778" type="System">
+                    <param id="0" name="Variable">Hazirlikasamasindami</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+            </actions>
+        </event-block>
+    </events>
+</c2eventsheet>

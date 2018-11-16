@@ -1,0 +1,192 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2project>
+    <name>New project</name>
+    <description></description>
+    <version>1.0.0.0</version>
+    <author></author>
+    <author-email></author-email>
+    <author-website>http://</author-website>
+    <app-id>com.mycompany.myapp</app-id>
+    <unique-id>24avmcmytyzk9</unique-id>
+    <saved-with-version>16600</saved-with-version>
+    <used-plugins>
+        <plugin author="Scirra" id="Sprite" version="1">Sprite</plugin>
+        <plugin author="Scirra" id="TiledBg" version="1">Tiled Background</plugin>
+        <plugin author="Scirra" id="Touch" version="1">Touch</plugin>
+    </used-plugins>
+    <used-behaviors>
+        <behavior author="Scirra" id="Physics" version="1">Physics</behavior>
+    </used-behaviors>
+    <used-effects />
+    <configurations>
+        <configuration exporter-descname="HTML5" exporter-id="html5" name="HTML5" />
+    </configurations>
+    <window-size>
+        <width>640</width>
+        <height>480</height>
+    </window-size>
+    <pixel-rounding>0</pixel-rounding>
+    <use-loader-layout>0</use-loader-layout>
+    <configuration-settings>
+        <prop name="Clear background">Yes</prop>
+        <prop name="Enable WebGL">On</prop>
+        <prop name="Fullscreen in browser">Letterbox scale</prop>
+        <prop name="Hide address bar">No</prop>
+        <prop name="Loader style">Progress bar &amp; logo</prop>
+        <prop name="Pause on unfocus">No</prop>
+        <prop name="Preview browser">(default)</prop>
+        <prop name="Sampling">Linear</prop>
+        <prop name="Use iOS retina display">All devices</prop>
+    </configuration-settings>
+    <object-folder expanded="1">
+        <object-type name="zemın" sid="8344013127262913">
+            <plugin id="TiledBg" />
+            <behaviors>
+                <behavior-type name="Physics" sid="2621964096556763">
+                    <behavior id="Physics" />
+                </behavior-type>
+            </behaviors>
+            <texture />
+        </object-type>
+        <object-type name="sapan1" sid="1254624211148359">
+            <plugin id="Sprite" />
+            <animation-folder expanded="1">
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="398353839993657" speed="5">
+                    <frame duration="1" hotspotX="0.502994" hotspotY="0.162745">
+                        <collision-poly>
+                            <point x="0.682635" y="0.223529" />
+                            <point x="0.497006" y="0.572549" />
+                            <point x="0.88024" y="0.0392157" />
+                            <point x="0.814371" y="0.5" />
+                            <point x="0.712575" y="0.905882" />
+                            <point x="0.497006" y="0.992157" />
+                            <point x="0.461078" y="0.84902" />
+                            <point x="0.562874" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="sapan2" sid="2682162088184489">
+            <plugin id="Sprite" />
+            <animation-folder expanded="1">
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="2741246170013075" speed="5">
+                    <frame duration="1" hotspotX="0.502994" hotspotY="0.162745">
+                        <collision-poly>
+                            <point x="0.0419162" y="0.0137255" />
+                            <point x="0.497006" y="0.441176" />
+                            <point x="0.407186" y="0.194118" />
+                            <point x="0.568862" y="0.5" />
+                            <point x="0.497006" y="0.578431" />
+                            <point x="0.263473" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="oyuncu" sid="3796719920722467">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Physics" sid="2510092757191972">
+                    <behavior id="Physics" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder expanded="1">
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="3473945248691755" speed="5">
+                    <frame duration="1" hotspotX="0.509766" hotspotY="0.5">
+                        <collision-poly>
+                            <point x="0.300781" y="0.300781" />
+                            <point x="0.5" y="0.229492" />
+                            <point x="0.62793" y="0.37207" />
+                            <point x="0.983398" y="0.5" />
+                            <point x="0.672852" y="0.672852" />
+                            <point x="0.5" y="0.849609" />
+                            <point x="0.196289" y="0.803711" />
+                            <point x="0.00488281" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Touch" sid="1777965632717949">
+            <plugin id="Touch" />
+        </object-type>
+        <object-type name="tahta" sid="7822072260217739">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Physics" sid="1640700048968856">
+                    <behavior id="Physics" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder expanded="1">
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="6749704688782388" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                        <collision-poly>
+                            <point x="0.0192308" y="0.0192308" />
+                            <point x="0.980769" y="0.0192308" />
+                            <point x="0.980769" y="0.980769" />
+                            <point x="0.0192308" y="0.980769" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="angry_birds___chuck__yellow____super_high_quality__by_tomefc98d5fzae" sid="5635943264333001">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Physics" sid="6999147001793027">
+                    <behavior id="Physics" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder expanded="1">
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="5121092731996804" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                        <collision-poly>
+                            <point x="0.5" y="0.0688235" />
+                            <point x="0.666765" y="0.333235" />
+                            <point x="0.792941" y="0.5" />
+                            <point x="0.940588" y="0.940588" />
+                            <point x="0.5" y="0.994118" />
+                            <point x="0.0561765" y="0.943824" />
+                            <point x="0.196471" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="TiledBackground" sid="9290564771667031">
+            <plugin id="TiledBg" />
+            <texture />
+        </object-type>
+        <object-type name="TiledBackground2" sid="5515964072826764">
+            <plugin id="TiledBg" />
+            <texture />
+        </object-type>
+    </object-folder>
+    <families />
+    <layout-folder expanded="1">
+        <layout>Layout 1.xml</layout>
+    </layout-folder>
+    <event-folder expanded="1">
+        <event-sheet>Event sheet 1.xml</event-sheet>
+    </event-folder>
+    <global-instances>
+        <global-instance type="Touch" uid="5">
+            <properties>
+                <use-mouse-input>Yes</use-mouse-input>
+            </properties>
+        </global-instance>
+    </global-instances>
+    <sounds-folder expanded="1" />
+    <music-folder expanded="1" />
+    <files-folder expanded="1">
+        <file-folder expanded="0" name="Icons">
+            <file name="icon-16.png" />
+            <file name="icon-32.png" />
+            <file name="icon-114.png" />
+            <file name="icon-128.png" />
+            <file name="loading-logo.png" />
+            <file name="icon-256.png" />
+        </file-folder>
+    </files-folder>
+</c2project>
